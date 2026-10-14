@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SSB | پیام‌رسان</title>
+<style>
+:root{font-family:Tahoma,"Segoe UI",Arial,sans-serif;color:#182533;background:#dfe8ef;--blue:#3390ec;--muted:#7d8b99;--line:#e8edf2}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;background:linear-gradient(135deg,#dfe8ef,#edf3f7)}button,input{font:inherit}button{cursor:pointer;border:0;border-radius:12px;background:var(--blue);color:white;padding:11px 15px;font-weight:600;transition:.18s}button:hover{filter:brightness(.96)}button.secondary{background:#edf4fa;color:#287fc5}input{border:1px solid #dfe6ed;border-radius:12px;padding:12px 13px;width:100%;background:#f7f9fb;outline:none}input:focus{border-color:#7eb9f1;box-shadow:0 0 0 3px #3390ec16;background:#fff}.wrap{max-width:1240px;margin:auto;padding:24px}.brand{display:flex;align-items:center;gap:12px;margin-bottom:18px}.logo{width:48px;height:48px;border-radius:17px;background:linear-gradient(135deg,#3390ec,#176fc0);color:#fff;display:grid;place-items:center;font-size:17px;font-weight:bold;box-shadow:0 7px 20px #3390ec44}.brand h1{margin:0;font-size:23px;letter-spacing:-.4px}.muted{color:var(--muted);font-size:12px}.card{background:#fff;border:1px solid #e6edf2;border-radius:18px;padding:17px;box-shadow:0 10px 35px #27435b0b}.auth{max-width:430px;margin:8vh auto;padding:28px}.auth h2{margin:4px 0 8px}.row{display:flex;gap:8px;align-items:center}.stack{display:grid;gap:10px}.layout{display:grid;grid-template-columns:330px minmax(0,1fr);gap:14px;min-height:calc(100vh - 150px)}.sidebar{display:flex;flex-direction:column;min-height:650px}.sidebar-head{display:flex;align-items:center;justify-content:space-between;gap:10px;padding-bottom:14px;border-bottom:1px solid var(--line)}.profile{display:flex;align-items:center;gap:10px;min-width:0}.avatar{width:44px;height:44px;flex:0 0 44px;border-radius:50%;display:grid;place-items:center;background:#dceeff;color:#2078be;font-weight:bold;overflow:hidden;object-fit:cover}.avatar.small{width:42px;height:42px;flex-basis:42px}.avatar.large{width:52px;height:52px;flex-basis:52px}.profile-name{font-weight:700;overflow:hidden;text-overflow:ellipsis}.profile-tools{display:flex;align-items:center;gap:6px}.iconbtn{padding:9px 10px;background:#edf4fa;color:#287fc5}.section-title{font-size:13px;color:#7d8b99;font-weight:bold;margin:18px 2px 8px}.roomlist{display:flex;flex-direction:column;gap:4px;margin-top:8px}.room{display:flex;align-items:center;gap:10px;width:100%;text-align:right;background:transparent;color:#233647;padding:10px;border-radius:14px;font-weight:400}.room:hover{background:#f3f7fa}.room.active{background:#e5f2ff;color:#176fba}.room-copy{display:flex;flex-direction:column;gap:4px;min-width:0;flex:1}.room-name{font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.room-last{font-size:11px;color:#82909c;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.create-tools{display:grid;gap:8px;padding-top:12px;margin-top:12px;border-top:1px solid var(--line)}.chat{display:flex;flex-direction:column;min-height:650px;padding:0;overflow:hidden}.chat-head{display:flex;align-items:center;gap:12px;padding:15px 20px;border-bottom:1px solid var(--line);background:#fff}.chat-head h2{font-size:16px;margin:0 0 5px}.chat-body{flex:1;min-height:350px;max-height:calc(100vh - 300px);overflow:auto;display:flex;flex-direction:column;gap:9px;padding:20px;background-color:#eaf1f5;background-image:radial-gradient(#cbd8e0 0.7px,transparent .7px);background-size:18px 18px}.msg{padding:10px 13px;border-radius:15px 15px 15px 4px;background:#fff;max-width:min(78%,560px);overflow-wrap:anywhere;box-shadow:0 2px 4px #18344b0a;line-height:1.7}.msg.mine{align-self:flex-start;background:#d9fdd3;border-radius:15px 15px 4px 15px}.msg .meta{font-size:10px;color:#82909c;margin-bottom:4px}.composer{display:flex;gap:9px;padding:14px;background:#fff;border-top:1px solid var(--line)}.composer input{flex:1;background:#f3f6f8;border-color:transparent;border-radius:24px;padding:13px 17px}.composer button{border-radius:24px;min-width:78px}.hidden{display:none!important}.notice{padding:9px 14px;color:#c0392b;font-size:12px;background:#fff}.subtle-btn{background:transparent;color:#6b7d8c;padding:8px}.section-label{font-size:12px;color:#8794a0;margin-top:14px}.empty{padding:22px 10px;text-align:center;color:#8594a1;font-size:13px;line-height:2}.profile-upload{display:none}.media-upload{display:none}.composer{position:relative;align-items:center}.composer .toolbtn{min-width:42px;padding:10px 12px;border-radius:50%;background:#edf4fa;color:#287fc5;font-size:18px}.composer #sendformdummy{display:none}.emoji-picker{position:absolute;bottom:72px;right:12px;z-index:5;background:#fff;border:1px solid #dfe6ed;box-shadow:0 8px 24px #18344b20;border-radius:14px;padding:10px;display:grid;grid-template-columns:repeat(6,36px);gap:4px;max-width:260px}.emoji-picker button{padding:7px 0;background:#f3f7fa;color:#243746;border-radius:8px;min-width:0;font-size:20px}.msg-media{display:block;max-width:min(100%,360px);max-height:320px;border-radius:10px;margin-top:5px}.msg audio{display:block;max-width:min(100%,300px);margin-top:6px}.recording{background:#e74c3c!important;color:#fff!important}
+@media(max-width:800px){.wrap{padding:10px}.brand{margin-bottom:10px}.layout{grid-template-columns:1fr;min-height:0}.sidebar{min-height:0}.chat{min-height:62vh}.chat-body{max-height:48vh;min-height:260px}.roomlist{max-height:210px;overflow:auto}.create-tools{grid-template-columns:1fr}.auth{margin:5vh auto}.msg{max-width:90%}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="brand"><div class="logo">SSB</div><div><h1>SSB Messenger</h1><div class="muted">پیام‌رسان ساده و امن</div></div></div>
+
+  <section id="auth" class="card auth stack">
+    <h2 id="auth-title">ورود به SSB</h2>
+    <input id="displayname" placeholder="نام نمایشی شما (مثلاً سینا)" autocomplete="nickname" maxlength="40">
+    <input id="username" type="email" placeholder="ایمیل برای ورود (مثلاً name@example.com)" autocomplete="email">
+    <input id="password" type="password" placeholder="رمز عبور (حداقل ۱۰ نویسه)" autocomplete="current-password">
+    <div class="row"><button id="login">ورود</button><button class="secondary" id="register">ساخت حساب</button></div>
+    <div class="muted">برای ساخت حساب، نام نمایشی، ایمیل و رمز را وارد کنید. برای ورود، ایمیل و رمز کافی است؛ نام نمایشی فقط هنگام ثبت‌نام لازم است.</div>
+  </section>
+
+  <section id="app" class="hidden">
+    <div class="layout">
+      <aside class="card sidebar">
+        <div class="sidebar-head">
+          <div class="profile"><img id="myavatar" class="avatar large" alt="عکس پروفایل" src=""/><div><div class="profile-name" id="who"></div><div class="muted">حساب SSB شما</div></div></div>
+          <div class="profile-tools"><label for="avatarfile" class="iconbtn" style="cursor:pointer;border-radius:10px;padding:9px 11px" title="تغییر عکس پروفایل">📷</label><button class="subtle-btn" id="settingsbtn" title="تنظیمات">⚙️ تنظیمات</button><button class="subtle-btn" id="logout" title="خروج">↪</button><input id="avatarfile" class="profile-upload" type="file" accept="image/png,image/jpeg,image/webp,image/gif"></div>
+        </div>
+        <div class="section-title">گفت‌وگوها</div>
+        <div class="stack">
+          <input id="target" placeholder="نام نمایشی یا نام کاربری طرف مقابل">
+          <button id="private">شروع چت خصوصی</button>
+          <input id="roomname" placeholder="نام گروه یا کانال">
+          <div class="row"><button id="makegroup">ساخت گروه</button><button id="makechannel">ساخت کانال</button></div>
+          <button class="secondary" id="refresh">↻ تازه‌سازی فهرست</button>
+        </div>
+        <div id="rooms" class="roomlist"></div>
+        <div class="section-title">پیدا کردن گروه و کانال</div>
+        <div id="discover" class="roomlist"></div>
+        <div id="settingspanel" class="card stack hidden" style="margin-top:14px">
+          <h3 style="margin:0">تنظیمات</h3>
+          <div class="muted">پنل ادمین</div>
+          <input id="admincode" type="password" placeholder="کد پنل ادمین" autocomplete="off">
+          <button id="unlockadmin">باز کردن پنل ادمین</button>
+          <div id="adminnotice" class="muted"></div>
+          <div id="adminpanel" class="stack hidden">
+            <h4 style="margin:8px 0">مدیریت گروه‌ها و کانال‌ها</h4>
+            <div class="muted">ادمین برنامه می‌تواند ارسال پیام در گروه یا کانال را موقتاً متوقف یا دوباره فعال کند.</div>
+            <button class="secondary" id="adminrefresh">تازه‌سازی فهرست</button>
+            <div id="adminrooms" class="roomlist"></div>
+          </div>
+        </div>
+      </aside>
+      <main class="card chat">
+        <div class="chat-head"><div class="avatar" id="roomavatar">SS</div><div style="flex:1;min-width:0"><h2 id="roomtitle">یک گفت‌وگو انتخاب کنید</h2><div id="roomhint" class="muted">پیام‌رسان SSB</div></div><button id="editroom" class="secondary hidden" type="button">✏️ ویرایش نام</button><button id="membersbtn" class="secondary hidden" type="button">👥 مدیریت اعضا</button></div>
+        <div id="messages" class="chat-body"><div class="empty">💬<br>برای شروع، یک گفت‌وگو را انتخاب کنید.</div></div>
+        <form id="sendform" class="composer">
+          <button type="button" id="emoji-toggle" class="toolbtn" title="ایموجی">😊</button>
+          <label for="imagefile" class="toolbtn" title="ارسال عکس، ویدیو یا فایل" style="cursor:pointer;display:grid;place-items:center">📎</label>
+          <input id="imagefile" class="media-upload" type="file" accept="image/*,video/mp4,video/webm,video/ogg,audio/*,.pdf,.doc,.docx,.xls,.xlsx,.ppt,.pptx,.psd,.txt,.csv,.zip,.rar,.7z,.odt,.ods,.odp">
+          <button type="button" id="recordbtn" class="toolbtn" title="ضبط پیام صوتی">🎤</button>
+          <input id="body" maxlength="2000" placeholder="پیام بنویسید..." autocomplete="off">
+          <button type="submit">ارسال ➤</button>
+          <div id="emoji-picker" class="emoji-picker hidden" aria-label="انتخاب ایموجی"></div>
+        </form>
+        <div id="notice" class="notice"></div>
+      </main>
+    </div>
+  </section>
+</div>
+<script>
+const $=id=>document.getElementById(id);
+let me=null, activeRoom=null, rooms=[], poller=null;
+async function api(url,opts={}) {
+  const headers={'Content-Type':'application/json',...(opts.headers||{})};
+  const res=await fetch(url,{...opts,headers,credentials:'same-origin'});
+  let data={}; try{data=await res.json()}catch{}
+  if(!res.ok) throw new Error(data.detail||'خطایی رخ داد');
+  return data;
+}
+function error(e){$('notice').textContent=e.message||String(e)}
+function setAvatar(img,url,username){if(url){img.src=url;img.alt='عکس پروفایل '+username}else{img.removeAttribute('src');img.alt='حروف اول نام کاربری';img.style.background='#dceeff';img.style.padding='12px';img.style.objectFit='contain';img.src='data:image/svg+xml,'+encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64"><rect width="64" height="64" rx="32" fill="#dceeff"/><text x="32" y="39" text-anchor="middle" font-size="23" font-family="Arial" fill="#2078be">${(username||'S').slice(0,1).toUpperCase()}</text></svg>`)}img.onerror=()=>{img.removeAttribute('src');img.style.display='none'}}
+$('avatarfile').onchange=async()=>{const file=$('avatarfile').files[0];if(!file)return;if(file.size>3*1024*1024){alert('حجم عکس باید کمتر از ۳ مگابایت باشد.');return}const form=new FormData();form.append('file',file);try{const res=await fetch('/api/me/avatar',{method:'POST',body:form,credentials:'same-origin'});const data=await res.json();if(!res.ok)throw new Error(data.detail||'بارگذاری عکس ناموفق بود');me.avatar_url=data.avatar_url;$('myavatar').style.display='';setAvatar($('myavatar'),me.avatar_url,me.username)}catch(e){alert(e.message)}finally{$('avatarfile').value=''}};
+
+async function auth(mode){
+  try{
+    const payload={username:$('username').value.trim(),password:$('password').value};
+    if(mode==='register') payload.display_name=$('displayname').value.trim();
+    const data=await api('/api/'+mode,{method:'POST',body:JSON.stringify(payload)});
+    me=(await api('/api/me')).user || {username:data.username}; await boot();
+  }catch(e){alert(e.message)}
+}
+$('login').onclick=()=>auth('login');
+$('register').onclick=()=>auth('register');
+$('password').addEventListener('keydown',e=>{if(e.key==='Enter')auth('login')});
+$('logout').onclick=async()=>{await api('/api/logout',{method:'POST'});location.reload()};
+async function boot(){
+  $('auth').classList.add('hidden');$('app').classList.remove('hidden');$('who').textContent=me.display_name||me.username;setAvatar($('myavatar'),me.avatar_url,me.display_name||me.username);
+  await refreshAll();
+}
+async function refreshAll(){
+  try{
+    rooms=await api('/api/rooms');
+    $('rooms').replaceChildren();
+    for(const r of rooms){
+      const b=document.createElement('button');b.className='room'+(activeRoom===r.id?' active':'');
+      const av=document.createElement('div');av.className='avatar small';av.textContent=r.kind==='private'?'👤':r.kind==='group'?'👥':'📢';
+      const copy=document.createElement('div');copy.className='room-copy';const nm=document.createElement('div');nm.className='room-name';nm.textContent=r.name;const last=document.createElement('div');last.className='room-last';last.textContent=r.last_message|| (r.kind==='channel'?'کانال':'هنوز پیامی نیست');copy.append(nm,last);b.append(av,copy);
+      b.onclick=()=>openRoom(r);$('rooms').append(b);
+    }
+    const discover=await api('/api/discover');$('discover').replaceChildren();
+    for(const r of discover){
+      const b=document.createElement('button');b.className='room';
+      const av=document.createElement('div');av.className='avatar small';av.textContent=r.kind==='group'?'👥':'📢';const copy=document.createElement('div');copy.className='room-copy';const nm=document.createElement('div');nm.className='room-name';nm.textContent=r.name;const sub=document.createElement('div');sub.className='room-last';sub.textContent='برای عضویت کلیک کنید';copy.append(nm,sub);b.append(av,copy);
+      b.onclick=async()=>{try{await api(`/api/rooms/${r.id}/join`,{method:'POST'});await refreshAll();const joined=rooms.find(x=>x.id===r.id);if(joined)openRoom(joined)}catch(e){error(e)}};
+      $('discover').append(b);
+    }
+  }catch(e){error(e)}
+}
+async function openRoom(room){
+  activeRoom=room.id;$('roomtitle').textContent=room.name;$('roomavatar').textContent=room.kind==='private'?'👤':room.kind==='group'?'👥':'📢';
+  const canEdit=room.kind!=='private' && (Number(room.owner_id)===Number(me.id) || me.is_admin || ['owner','admin'].includes(room.role));
+  $('editroom').classList.toggle('hidden',!canEdit);$('membersbtn').classList.toggle('hidden',room.kind==='private'||!canEdit);
+  $('roomhint').textContent=room.kind==='channel'?'کانال · فقط مدیر می‌تواند پیام ارسال کند':room.kind==='group'?'گروه':'گفت‌وگوی خصوصی';
+  await loadMessages();await refreshAll();
+}
+async function loadMessages(){
+  if(!activeRoom)return;
+  try{
+    const data=await api(`/api/rooms/${activeRoom}/messages`);const box=$('messages');box.replaceChildren();
+    for(const m of data){
+      const el=document.createElement('div');el.className='msg'+(m.username===me.username?' mine':'');
+      const meta=document.createElement('div');meta.className='meta';
+      meta.textContent=m.username+' · '+new Date(m.created_at).toLocaleString();
+      const text=document.createElement('div');text.textContent=m.body;el.append(meta,text);
+      if(m.media_url && m.media_type==='image'){
+        const img=document.createElement('img');img.src=m.media_url;img.alt='عکس ارسال‌شده';img.className='msg-media';img.loading='lazy';el.append(img);
+      } else if(m.media_url && m.media_type==='audio'){
+        const audio=document.createElement('audio');audio.src=m.media_url;audio.controls=true;audio.preload='metadata';el.append(audio);
+      } else if(m.media_url && m.media_type==='video'){
+        const video=document.createElement('video');video.src=m.media_url;video.controls=true;video.className='msg-media';video.preload='metadata';el.append(video);
+      } else if(m.media_url && m.media_type==='file'){
+        const a=document.createElement('a');a.href=m.media_url;a.download=m.original_name||'download';a.textContent='⬇ دانلود فایل: '+(m.original_name||m.body);a.target='_blank';a.rel='noopener';el.append(a);
+      }
+      if(Number(m.sender_id)===Number(me.id)){
+        const del=document.createElement('button');del.type='button';del.className='subtle-btn';del.textContent='🗑 حذف پیام';del.onclick=async()=>{if(!confirm('این پیام حذف شود؟'))return;try{await api(`/api/rooms/${activeRoom}/messages/${m.id}/delete`,{method:'POST'});await loadMessages()}catch(e){error(e)}};el.append(del);
+      }
+      box.append(el);
+    }
+    box.scrollTop=box.scrollHeight;
+  }catch(e){error(e)}
+}
+$('sendform').onsubmit=async e=>{
+  e.preventDefault();if(!activeRoom)return;
+  const body=$('body').value.trim();if(!body)return;
+  try{await api(`/api/rooms/${activeRoom}/messages`,{method:'POST',body:JSON.stringify({body})});$('body').value='';await loadMessages()}
+  catch(e){error(e)}
+};
+async function uploadMedia(file){
+  if(!activeRoom){alert('اول یک گفت‌وگو انتخاب کنید.');return}
+  if(file.size>10*1024*1024){alert('حجم فایل باید حداکثر ۱۰ مگابایت باشد.');return}
+  const form=new FormData();form.append('file',file,file.name||'voice.webm');
+  try{
+    const res=await fetch(`/api/rooms/${activeRoom}/media`,{method:'POST',body:form,credentials:'same-origin'});
+    let data={};try{data=await res.json()}catch{}
+    if(!res.ok)throw new Error(data.detail||'ارسال فایل انجام نشد');
+    await loadMessages();
+  }catch(e){error(e)}
+}
+$('imagefile').onchange=async()=>{const f=$('imagefile').files[0];if(f)await uploadMedia(f);$('imagefile').value=''};
+const emojis=['😀','😁','😂','🤣','😊','😍','🥰','😘','😎','😭','😡','👍','👎','👏','🙏','❤️','💙','🔥','🎉','✨','🤔','😴','🥳','😇','💯','🌹','☕','🍕','🐱','🚀','💬','✅','🙌','🤝','😅','😉'];
+for(const emoji of emojis){const b=document.createElement('button');b.type='button';b.textContent=emoji;b.title=emoji;b.onclick=()=>{$('body').value+=$('body').value?' '+emoji:emoji;$('body').focus();$('emoji-picker').classList.add('hidden')};$('emoji-picker').append(b)}
+$('emoji-toggle').onclick=()=>$('emoji-picker').classList.toggle('hidden');
+document.addEventListener('click',e=>{if(!$('emoji-picker').contains(e.target)&&e.target!==$('emoji-toggle'))$('emoji-picker').classList.add('hidden')});
+let recorder=null,recordChunks=[],recordStream=null;
+$('recordbtn').onclick=async()=>{
+  const btn=$('recordbtn');
+  if(recorder && recorder.state==='recording'){recorder.stop();btn.classList.remove('recording');btn.textContent='🎤';btn.title='ضبط پیام صوتی';return}
+  if(!activeRoom){alert('اول یک گفت‌وگو انتخاب کنید.');return}
+  if(!navigator.mediaDevices?.getUserMedia || !window.MediaRecorder){alert('ضبط صدا در این مرورگر پشتیبانی نمی‌شود. از نسخه جدید Chrome یا Edge استفاده کنید.');return}
+  try{
+    recordStream=await navigator.mediaDevices.getUserMedia({audio:true});
+    const mime=['audio/webm;codecs=opus','audio/webm','audio/mp4'].find(t=>MediaRecorder.isTypeSupported(t));
+    recorder=mime?new MediaRecorder(recordStream,{mimeType:mime}):new MediaRecorder(recordStream);
+    recordChunks=[];recorder.ondataavailable=e=>{if(e.data.size)recordChunks.push(e.data)};
+    recorder.onstop=async()=>{
+      const type=recorder.mimeType||'audio/webm';const ext=type.includes('mp4')?'m4a':'webm';
+      const blob=new Blob(recordChunks,{type});recordStream?.getTracks().forEach(t=>t.stop());recordStream=null;
+      if(blob.size)await uploadMedia(new File([blob],`voice.${ext}`,{type}));
+    };
+    recorder.start();btn.classList.add('recording');btn.textContent='⏹';btn.title='پایان ضبط و ارسال';
+  }catch(e){alert('دسترسی به میکروفون ممکن نشد. اجازه استفاده از میکروفون را در مرورگر فعال کنید.');recordStream?.getTracks().forEach(t=>t.stop());recordStream=null}
+};
+
+
+
+$('settingsbtn').onclick=()=> $('settingspanel').classList.toggle('hidden');
+$('unlockadmin').onclick=async()=>{
+  try{
+    await api('/api/admin/unlock',{method:'POST',body:JSON.stringify({code:$('admincode').value})});
+    $('adminnotice').textContent='دسترسی پنل ادمین فعال شد.';
+    $('adminpanel').classList.remove('hidden');
+    await loadAdminRooms();
+  }catch(e){$('adminnotice').textContent=e.message}
+};
+async function loadAdminRooms(){
+  try{
+    const data=await api('/api/admin/overview');
+    const list=$('adminrooms');list.replaceChildren();
+    for(const r of data.rooms.filter(x=>x.kind!=='private')){
+      const item=document.createElement('div');item.className='card stack';item.style.padding='10px';
+      const title=document.createElement('div');title.textContent=(r.kind==='group'?'👥 گروه: ':'📢 کانال: ')+r.name+(r.suspended?' — ⏸ تعلیق ارسال پیام':'');
+      const suspend=document.createElement('button');suspend.className='secondary';suspend.textContent=r.suspended?'▶️ رفع تعلیق ارسال':'⏸ تعلیق ارسال پیام';suspend.onclick=async()=>{try{await api(`/api/admin/rooms/${r.id}/suspension`,{method:'POST',body:JSON.stringify({suspended:!r.suspended})});$('adminnotice').textContent=r.suspended?'ارسال پیام دوباره فعال شد.':'ارسال پیام در این گروه/کانال متوقف شد.';await loadAdminRooms();await refreshAll()}catch(e){$('adminnotice').textContent=e.message}};
+      const edit=document.createElement('button');edit.textContent='✏️ ویرایش نام';edit.onclick=async()=>{
+        const name=prompt('نام جدید را وارد کنید:',r.name);if(name===null)return;
+        try{await api(`/api/admin/rooms/${r.id}/rename`,{method:'POST',body:JSON.stringify({name:name.trim()})});$('adminnotice').textContent='نام با موفقیت تغییر کرد.';await loadAdminRooms();await refreshAll();if(activeRoom===r.id){const updated=rooms.find(x=>x.id===r.id);if(updated)await openRoom(updated)}}catch(e){$('adminnotice').textContent=e.message}
+      };
+      item.append(title,suspend,edit);list.append(item);
+    }
+    if(!list.children.length)list.textContent='گروه یا کانالی وجود ندارد.';
+  }catch(e){$('adminnotice').textContent=e.message}
+}
+$('adminrefresh').onclick=loadAdminRooms;
+
+$('private').onclick=async()=>{try{const r=await api('/api/private',{method:'POST',body:JSON.stringify({username:$('target').value.trim()})});await refreshAll();const room=rooms.find(x=>x.id===r.id);if(room)openRoom(room)}catch(e){error(e)}};
+async function createRoom(kind){
+  try{const r=await api('/api/rooms',{method:'POST',body:JSON.stringify({name:$('roomname').value.trim(),kind})});$('roomname').value='';await refreshAll();const room=rooms.find(x=>x.id===r.id);if(room)openRoom(room)}
+  catch(e){error(e)}
+}
+$('editroom').onclick=async()=>{const room=rooms.find(r=>r.id===activeRoom);if(!room)return;const name=prompt('نام جدید گروه یا کانال را وارد کن:',room.name);if(name===null)return;try{await api(`/api/rooms/${activeRoom}`,{method:'PATCH',body:JSON.stringify({name:name.trim()})});await refreshAll();const updated=rooms.find(r=>r.id===activeRoom);if(updated)await openRoom(updated)}catch(e){error(e)}};
+$('membersbtn').onclick=async()=>{
+  if(!activeRoom)return;
+  try{
+    const members=await api(`/api/rooms/${activeRoom}/members`);
+    const summary=members.map(m=>`${m.display_name} (@${m.username}) — ${m.role} [ID:${m.id}]`).join('\n');
+    const action=prompt('اعضای فعلی:\n'+summary+'\n\nبرای افزودن عضو نام نمایشی یا نام کاربری را وارد کنید؛ برای حذف، شناسه عددی عضو را وارد کنید:');
+    if(!action)return;
+    if(/^\d+$/.test(action.trim())){
+      await api(`/api/rooms/${activeRoom}/members/${action.trim()}`,{method:'DELETE'});
+    }else{
+      await api(`/api/rooms/${activeRoom}/members`,{method:'POST',body:JSON.stringify({username:action.trim(),role:'member'})});
+    }
+    $('notice').textContent='فهرست اعضا به‌روزرسانی شد.';
+  }catch(e){error(e)}
+};
+$('makegroup').onclick=()=>createRoom('group');
+$('makechannel').onclick=()=>createRoom('channel');
+$('refresh').onclick=refreshAll;
+(async()=>{
+  try{const data=await api('/api/me');if(data.user){me=data.user;await boot()}}catch(e){error(e)}
+  // Simple polling keeps this starter project easy to run. WebSocket endpoint is
+  // scaffolded server-side; replace polling with authenticated pub/sub for scale.
+  poller=setInterval(()=>{if(activeRoom)loadMessages()},3000);
+})();
+</script>
+</body>
+</html>
